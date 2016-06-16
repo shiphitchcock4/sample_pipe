@@ -1,44 +1,5 @@
 jobs:
-  - name: dv-man
+  - name: pipeline-job1
     type: manifest
     steps:
-      - GET: dv-image
-      - GET: dv-opts
-      - GET: dv-params
-
-  - name: dv-test
-    type: ecsDeploy
-    steps:
-      - GET: dv-man
-      - GET: env-test
-
-  - name: box-man
-    type: manifest
-    steps:
-      - GET: box-image
-      - GET: box-opts
-      - GET: box-params
-
-  - name: box-test
-    type: ecsDeploy
-    steps:
-      - GET: box-man
-      - GET: env-test
-  
-  - name: box-dcl
-    type: dclDeploy
-    steps:
-      - GET: box-man
-      - GET: env-dcl  
-      
-  - name: box-gke
-    type: gkeDeploy
-    steps:
-      - GET: box-man
-      - GET: env-gke      
-
-  - name: box-prod
-    type: ecsDeploy
-    steps:
-      - GET: box-man
-      - GET: env-prod
+      - GET: pipeline-image

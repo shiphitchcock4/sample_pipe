@@ -1,5 +1,7 @@
 jobs:
-  - name: pipeline-job1
-    type: manifest
+  - name: infra-test
+    type: runSh
     steps:
-      - GET: pipeline-image
+      - GET: infra-repo
+      - TASK: 
+         script:  ./infra-repo/infraSteps.sh

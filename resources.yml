@@ -1,16 +1,7 @@
 resources:
-  - name: pipeline-image
-    type: image
-    integration: ship4-docker
+  - name: infra-repo
+    type: gitRepo
+    integration: shiphitchcock4-github
     source:
-      name: "shiphitchcock4/hitchcock4_sample_node"
-      isPull: false
-      tag: latest
-      
-  - name: pipeline-imagenew
-    type: image
-    integration: ship4-docker
-    source:
-      name: "shiphitchcock4/hitchcock4_sample_node"
-      isPull: false
-      tag: latest
+      name: shiphitchcock4/sampleInfra
+      branch: master
